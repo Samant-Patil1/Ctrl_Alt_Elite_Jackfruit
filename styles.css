@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: url("result.jpg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #121212;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #333;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #6c63ff;
+}
+
+header p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section.content {
+    background-color: rgba(255, 255, 255, 0.5); /* 60% transparency */
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1), -7px -7px 20px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    color: #6c63ff;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #6c63ff;
+}
+
+h3 {
+    color: #6c63ff;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: #eeeeee;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 900px;
+}
