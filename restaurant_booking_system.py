@@ -154,6 +154,10 @@ class RestaurantBookingApp:
         self.booking_button = tk.Button(self.master, text="Make a Reservation", command=self.make_reservation)
         self.booking_button.pack(pady=10)
 
+        # Cancellation button
+        self.cancellation_button = tk.Button(self.master, text="Cancel Reservation", command=self.show_cancellation_page)
+        self.cancellation_button.pack(pady=10)
+
     def make_reservation(self):
         if not self.current_user:
             messagebox.showerror("Error", "Please log in to make a reservation.")
@@ -201,6 +205,39 @@ class RestaurantBookingApp:
                 messagebox.showerror("Error", str(e))
 
         tk.Button(reservation_window, text="Confirm", command=confirm_booking).pack(pady=10)
+
+    def show_cancellation_page(self):
+        # Create a new frame for cancellation
+        cancellation_frame = tk.Frame(self.master)
+        cancellation_frame.pack(pady=20)
+
+        # Cancellation message
+        cancellation_label = tk.Label(cancellation_frame, text="Your reservation has been cancelled.")
+        cancellation_label.pack(pady=10)
+
+        # Confirm cancellation button
+        confirm_button = tk.Button(cancellation_frame, text="Confirm", command=self.confirm_cancellation)
+        confirm_button.pack(pady=5)
+
+        # Back button
+        back_button = tk.Button(cancellation_frame, text="Back to Main Menu", command=self.show_main_menu)
+        back_button.pack(pady=5)
+
+        # Hide other frames
+        self.hide_all_frames()
+        cancellation_frame.pack()
+
+    def confirm_cancellation(self):
+        # Logic to confirm cancellation
+        messagebox.showinfo("Cancellation", "Your reservation has been confirmed as cancelled.")
+
+    def show_main_menu(self):
+        # Logic to show the main menu
+        messagebox.showinfo("Main Menu", "Returning to the main menu.")
+
+    def hide_all_frames(self):
+        for widget in self.master.winfo_children():
+            widget.pack_forget()
 
 if __name__ == "__main__":
     root = tk.Tk()
